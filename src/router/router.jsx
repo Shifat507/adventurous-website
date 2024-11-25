@@ -1,6 +1,6 @@
 import AboutUs from "../components/AboutUs";
-import Blog from "../components/Blog";
-import Header from "../components/Header";
+import Blogs from "../components/Blogs";
+
 import Home from "../components/Home";
 import Profile from "../components/Profile";
 
@@ -16,11 +16,13 @@ const router = createBrowserRouter([
         children: [
             {
                 path: '/',
-                element: <Home></Home>
+                element: <Home></Home>,
+                loader: ()=> fetch('/adventure-data.json')
             },
             {
-                path: '/blog',
-                element: <Blog></Blog>
+                path: '/blogs',
+                element: <Blogs></Blogs>,
+                loader: ()=> fetch('/adventure-data.json')
             },
             {
                 path: '/aboutUs',

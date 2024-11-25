@@ -1,7 +1,7 @@
 [
     {
         "adventureTitle": "Mountain Hiking",
-        "image": "https://example.com/images/mountain_hiking.jpg",
+        "image": "https://i.ibb.co.com/s603KFN/Mountain-Hiking-Photoroom.jpg",
         "id": 1,
         "categoryName": "Hiking",
         "shortDescription": "A thrilling hike through rugged mountain trails.",
@@ -11,13 +11,13 @@
         "duration": "5 hours",
         "adventureLevel": "Intermediate",
         "includedItems": ["Water", "Snacks", "First Aid Kit"],
-        "ecoFriendlyFeatures": ["Waste Management", "Carbon Offset"],
+        "ecoFriendlyFeatures": ["Waste Management", "Carbon Offset", "Recycled Materials Usage", "Local Community Support", "Educational Programs"],
         "maxGroupSize": 10,
         "specialInstructions": ["Wear sturdy shoes", "Carry extra water"]
     },
     {
         "adventureTitle": "Desert Safari",
-        "image": "https://example.com/images/desert_safari.jpg",
+        "image": "https://i.ibb.co.com/Kq91x6X/Desert-Safari-Photoroom.jpg",
         "id": 2,
         "categoryName": "Safari",
         "shortDescription": "Experience the vastness and beauty of the desert.",
@@ -27,13 +27,13 @@
         "duration": "4 hours",
         "adventureLevel": "Easy",
         "includedItems": ["Sandboard", "Sun Protection", "Guided Tour"],
-        "ecoFriendlyFeatures": ["Solar-Powered Vehicles", "Water Conservation"],
+        "ecoFriendlyFeatures": ["Solar-Powered Vehicles", "Water Conservation", "Recycled Materials Usage", "Local Community Support", "Educational Programs"],
         "maxGroupSize": 12,
         "specialInstructions": ["Wear light clothing", "Bring sunscreen"]
     },
     {
         "adventureTitle": "Skydiving",
-        "image": "https://example.com/images/skydiving.jpg",
+        "image": "https://i.ibb.co.com/3WtBY2j/Skydiving-Photoroom.jpg",
         "id": 4,
         "categoryName": "Extreme",
         "shortDescription": "An adrenaline-pumping skydive from 15,000 feet.",
@@ -43,13 +43,13 @@
         "duration": "2 hours",
         "adventureLevel": "Extreme",
         "includedItems": ["Parachute", "Training Session", "Camera"],
-        "ecoFriendlyFeatures": ["Eco-Friendly Jump Suits", "Waste Reduction Measures"],
+        "ecoFriendlyFeatures": ["Eco-Friendly Jump Suits", "Waste Reduction Measures", "Recycled Materials Usage", "Local Community Support", "Educational Programs"],
         "maxGroupSize": 6,
         "specialInstructions": ["Ensure physical fitness", "Sign a waiver"]
     },
     {
         "adventureTitle": "Rainforest Trek",
-        "image": "https://example.com/images/rainforest_trek.jpg",
+        "image": "https://i.ibb.co.com/k6dGqTF/Rainforest-Trek-Photoroom.jpg",
         "id": 5,
         "categoryName": "Trekking",
         "shortDescription": "Immerse yourself in the biodiversity of the rainforest.",
@@ -59,13 +59,13 @@
         "duration": "7 hours",
         "adventureLevel": "Moderate",
         "includedItems": ["Guide", "Snacks", "Rain Poncho"],
-        "ecoFriendlyFeatures": ["Eco-Trails", "Wildlife Protection"],
+        "ecoFriendlyFeatures": ["Eco-Trails", "Wildlife Protection", "Recycled Materials Usage", "Local Community Support", "Educational Programs"],
         "maxGroupSize": 10,
         "specialInstructions": ["Wear breathable clothing", "Respect wildlife"]
     },
     {
         "adventureTitle": "Kayaking Adventure",
-        "image": "https://example.com/images/kayaking.jpg",
+        "image": "https://i.ibb.co.com/d51jfqT/Kayaking-Adventure-Photoroom.jpg",
         "id": 6,
         "categoryName": "Water Sports",
         "shortDescription": "Explore calm rivers and thrilling rapids by kayak.",
@@ -75,13 +75,13 @@
         "duration": "3 hours",
         "adventureLevel": "Easy",
         "includedItems": ["Kayak", "Paddle", "Life Jacket"],
-        "ecoFriendlyFeatures": ["Water Conservation", "Low Impact Activities"],
+        "ecoFriendlyFeatures": ["Water Conservation", "Low Impact Activities", "Recycled Materials Usage", "Local Community Support", "Educational Programs"],
         "maxGroupSize": 6,
         "specialInstructions": ["Wear a swimsuit", "Bring a waterproof bag"]
     },
     {
         "adventureTitle": "Snorkeling",
-        "image": "https://example.com/images/snorkeling.jpg",
+        "image": "https://i.ibb.co.com/pLk0XsB/Snorkeling-Photoroom.jpg",
         "id": 7,
         "categoryName": "Water Sports",
         "shortDescription": "Discover the vibrant underwater life in crystal-clear waters.",
@@ -91,13 +91,13 @@
         "duration": "2 hours",
         "adventureLevel": "Easy",
         "includedItems": ["Snorkel Gear", "Guide", "Towel"],
-        "ecoFriendlyFeatures": ["Reef Safe Sunscreen", "Eco-Friendly Boat"],
+        "ecoFriendlyFeatures": ["Reef Safe Sunscreen", "Eco-Friendly Boat", "Recycled Materials Usage", "Local Community Support", "Educational Programs"],
         "maxGroupSize": 15,
         "specialInstructions": ["Wear reef-safe sunscreen", "Be cautious of coral"]
     },
     {
         "adventureTitle": "Hot Air Balloon Ride",
-        "image": "https://example.com/images/hot_air_balloon.jpg",
+        "image": "https://i.ibb.co.com/xG75kBt/Hot-Air-Balloon-Ride-Photoroom.jpg",
         "id": 8,
         "categoryName": "Air Tours",
         "shortDescription": "Soar over scenic landscapes in a hot air balloon.",
@@ -107,13 +107,13 @@
         "duration": "1.5 hours",
         "adventureLevel": "Easy",
         "includedItems": ["Pilot", "Beverage", "Certificate"],
-        "ecoFriendlyFeatures": ["Low Carbon Footprint", "Renewable Energy Usage"],
+        "ecoFriendlyFeatures": ["Low Carbon Footprint", "Renewable Energy Usage", "Recycled Materials Usage", "Local Community Support", "Educational Programs"],
         "maxGroupSize": 4,
         "specialInstructions": ["Wear comfortable shoes", "Arrive early for briefing"]
     },
     {
         "adventureTitle": "Wildlife Safari",
-        "image": "https://example.com/images/wildlife_safari.jpg",
+        "image": "https://i.ibb.co.com/KjwDFVf/Wildlife-Safari-Photoroom.jpg",
         "id": 9,
         "categoryName": "Safari",
         "shortDescription": "Observe majestic wildlife in their natural habitat.",
@@ -123,14 +123,13 @@
         "duration": "5 hours",
         "adventureLevel": "Easy",
         "includedItems": ["Safari Vehicle", "Guide", "Binoculars"],
-        "ecoFriendlyFeatures": ["Wildlife Preservation", "Eco-Friendly Safari Vehicles"],
+        "ecoFriendlyFeatures": ["Wildlife Preservation", "Eco-Friendly Safari Vehicles", "Recycled Materials Usage", "Local Community Support", "Educational Programs"],
         "maxGroupSize": 10,
         "specialInstructions": ["Keep noise levels low", "No flash photography"]
     },
-    
     {
         "adventureTitle": "Zip Lining",
-        "image": "https://example.com/images/zip_lining.jpg",
+        "image": "https://i.ibb.co.com/N2Y5B62/Zip-Lining-Photoroom.jpg",
         "id": 12,
         "categoryName": "Extreme",
         "shortDescription": "Fly through the treetops on a high-speed zip line.",
@@ -140,13 +139,13 @@
         "duration": "2 hours",
         "adventureLevel": "Moderate",
         "includedItems": ["Helmet", "Gloves", "Safety Harness"],
-        "ecoFriendlyFeatures": ["Eco-Conscious Zip Lines", "Sustainable Practices"],
+        "ecoFriendlyFeatures": ["Eco-Conscious Zip Lines", "Sustainable Practices", "Recycled Materials Usage", "Local Community Support", "Educational Programs"],
         "maxGroupSize": 8,
         "specialInstructions": ["Wear long sleeves", "Avoid loose clothing"]
     },
     {
         "adventureTitle": "Scuba Diving",
-        "image": "https://example.com/images/scuba_diving.jpg",
+        "image": "https://i.ibb.co.com/9qggPz8/Scuba-Diving-Photoroom.jpg",
         "id": 13,
         "categoryName": "Water Sports",
         "shortDescription": "Dive into the deep blue and explore vibrant marine life.",
@@ -156,25 +155,8 @@
         "duration": "3 hours",
         "adventureLevel": "Intermediate",
         "includedItems": ["Scuba Gear", "Guide", "Underwater Camera"],
-        "ecoFriendlyFeatures": ["Marine Life Preservation", "Reef Protection"],
+        "ecoFriendlyFeatures": ["Marine Life Preservation", "Reef Protection", "Recycled Materials Usage", "Local Community Support", "Educational Programs"],
         "maxGroupSize": 8,
         "specialInstructions": ["Must have basic swimming skills", "Wear a swimsuit"]
-    },
-    
-    {
-        "adventureTitle": "Horseback Riding",
-        "image": "https://example.com/images/horseback_riding.jpg",
-        "id": 15,
-        "categoryName": "Outdoor",
-        "shortDescription": "Gallop through scenic trails on horseback.",
-        "adventureCost": 150,
-        "bookingAvailability": true,
-        "location": "Andalusia, Spain",
-        "duration": "3 hours",
-        "adventureLevel": "Easy",
-        "includedItems": ["Horse", "Guide", "Helmet"],
-        "ecoFriendlyFeatures": ["Sustainable Trails", "Animal Welfare Practices"],
-        "maxGroupSize": 6,
-        "specialInstructions": ["Wear long pants", "Bring sunscreen"]
     }
 ]
