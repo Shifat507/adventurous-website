@@ -12,7 +12,7 @@ const Blog = ({ blog }) => {
                         alt={adventureTitle} />
                 </figure>
                 <div className="card-body w-full md:w-[50%] p-4">
-                    <h2 className="card-title">{adventureTitle}</h2>
+                    <h2 className="card-title text-2xl font-bold">{adventureTitle}</h2>
                     <h3 className='text-xl font-bold'>Features: </h3>
                     
                         {ecoFriendlyFeatures.map((feature, index) => <li key={index}>{feature}</li>)}

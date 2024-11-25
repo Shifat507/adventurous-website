@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useLoaderData } from 'react-router-dom';
 
 const BlogDetails = () => {
@@ -24,6 +25,9 @@ const BlogDetails = () => {
 
     return (
         <div className="w-11/12 mx-auto my-10">
+            <Helmet>
+                <title>Details | Home</title>
+            </Helmet>
             <div className="flex flex-col md:flex-row gap-6 bg-white rounded-lg shadow-2xl p-6 hover:shadow-lg">
 
                 <div className="md:w-1/2 w-full">

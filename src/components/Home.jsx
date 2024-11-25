@@ -7,11 +7,15 @@ import Blog from './Blog';
 import adventureBanner from '../assets/adventure-title.png'
 import QuesAns from './QuesAns';
 import Reviews from './Reviews';
+import { Helmet } from 'react-helmet-async';
 const Home = () => {
     const blogsData = useLoaderData();
     // console.log(data);
     return (
         <div>
+            <Helmet>
+                <title>Home</title>
+            </Helmet>
             <Banner></Banner>
             <main className='w-11/12 mx-auto '>
                 <div className='my-10 '>
