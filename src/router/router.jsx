@@ -1,4 +1,5 @@
 import AboutUs from "../components/AboutUs";
+import BlogDetails from "../components/BlogDetails";
 import Blogs from "../components/Blogs";
 
 import Home from "../components/Home";
@@ -31,6 +32,18 @@ const router = createBrowserRouter([
             {
                 path: '/profile',
                 element: <Profile></Profile>
+            },
+            {
+                path: '/blogDetails/:id',
+                element: <BlogDetails></BlogDetails>,
+                loader: async ({params}) =>{
+                    const res = await fetch('/adventure-data.json')
+                    const data = await res.json()
+
+                    const singleData = data.find(d => d.id == params.id)
+
+                    return singleData;
+                }
             },
 
         ]

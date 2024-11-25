@@ -6,6 +6,7 @@ import { Link, useLoaderData } from 'react-router-dom';
 import Blog from './Blog';
 import adventureBanner from '../assets/adventure-title.png'
 import QuesAns from './QuesAns';
+import Reviews from './Reviews';
 const Home = () => {
     const blogsData = useLoaderData();
     // console.log(data);
@@ -32,6 +33,9 @@ const Home = () => {
                 <div className='my-10'>
 
                     <QuesAns></QuesAns>
+                </div>
+                <div>
+                    <Reviews></Reviews>
                 </div>
             </main>
         </div>
