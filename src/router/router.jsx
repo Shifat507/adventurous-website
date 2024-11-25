@@ -8,12 +8,13 @@ import Profile from "../components/Profile";
 import HomeLayout from "../layouts/HomeLayout";
 
 import { createBrowserRouter } from 'react-router-dom';
+import ErrorPage from "../pages/ErrorPage";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <HomeLayout></HomeLayout>,
-        errorElement:<h1>Error Page</h1>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
             {
                 path: '/',
