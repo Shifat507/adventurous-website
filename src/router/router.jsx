@@ -9,6 +9,9 @@ import HomeLayout from "../layouts/HomeLayout";
 
 import { createBrowserRouter } from 'react-router-dom';
 import ErrorPage from "../pages/ErrorPage";
+import Login from "../components/Login";
+import Register from "../components/Register";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -36,7 +39,9 @@ const router = createBrowserRouter([
             },
             {
                 path: '/blogDetails/:id',
-                element: <BlogDetails></BlogDetails>,
+                element: <PrivateRoute>
+                    <BlogDetails></BlogDetails>
+                </PrivateRoute>,
                 loader: async ({params}) =>{
                     const res = await fetch('/adventure-data.json')
                     const data = await res.json()
@@ -46,6 +51,14 @@ const router = createBrowserRouter([
                     return singleData;
                 }
             },
+            {
+                path: '/login',
+                element: <Login></Login>
+            },
+            {
+                path: '/register',
+                element:<Register></Register>
+            }
 
         ]
     },

@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useLoaderData } from 'react-router-dom';
+import { authContext } from '../provider/AuthProvider';
 
 const BlogDetails = () => {
+    const kobita = useContext(authContext);
+    console.log(kobita);
     const singleData = useLoaderData();
     const { adventureCost, adventureLevel, adventureTitle, bookingAvailability, categoryName, duration, ecoFriendlyFeatures, image, includedItems, location, maxGroupSize, shortDescription, specialInstructions } = singleData;
 
