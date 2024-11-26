@@ -5,6 +5,7 @@ import { authContext } from '../provider/AuthProvider';
 const Register = () => {
     const { handleRegister, setUser, userUpdatedData } = useContext(authContext);
     const [error, setError] = useState({})
+    const [passErr, setPassErr] = useState({});
     const navigate = useNavigate();
     const handleSubmitRegister = (e) => {
         e.preventDefault();
@@ -19,6 +20,13 @@ const Register = () => {
             return;
         }
 
+        const regex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+
+        if(!regex.test(password)){
+            setPassErr({...passErr, pass:"Must have at least one uppercase, one lowercase letter and length might be 6 character"});
+            return;
+            
+        }
         handleRegister(email, password)
             .then((res) => {
                 const user = res.user;
@@ -100,7 +108,13 @@ const Register = () => {
                             className="input input-bordered"
                             required
                         />
+                        {
+                            passErr.pass && (<label className="label text-xs text-red-600">
+                                {passErr.pass}
+                            </label>)
+                        }
                     </div>
+                    
                     <p className="text-sm font-semibold ms-2 mt-2">
                         Already have an account?{' '}
                         <Link to="/login" className="text-red-600 underline">
