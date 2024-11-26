@@ -3,7 +3,7 @@ import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { authContext } from '../provider/AuthProvider';
 
 const Register = () => {
-    const { handleRegister, setUser } = useContext(authContext);
+    const { handleRegister, setUser, userUpdatedData } = useContext(authContext);
     const [error, setError] = useState({})
     const navigate = useNavigate();
     const handleSubmitRegister = (e) => {
@@ -22,13 +22,20 @@ const Register = () => {
         handleRegister(email, password)
             .then((res) => {
                 const user = res.user;
-                
+            
                 
                 user.displayName = name;
                 user.photoURL = photoUrl;
 
                 setUser(user);
-                navigate('/');
+                userUpdatedData({displayName:name, photoURL:photoUrl})
+                .then(() =>{
+                    navigate('/');
+                })
+                .catch(error =>{
+                    console.log(error.message);
+                })
+                
                 // console.log('Registered User:', user.email);
             })
             .catch((error) => {
@@ -40,6 +47,7 @@ const Register = () => {
         <div>
             <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mx-auto my-10">
                 <form onSubmit={handleSubmitRegister} className="card-body">
+                <h2 className='text-4xl font-bold my-3 mx-auto'>Registration</h2>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text">Name</span>
