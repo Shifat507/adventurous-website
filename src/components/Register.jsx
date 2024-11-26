@@ -36,13 +36,16 @@ const Register = () => {
                 user.photoURL = photoUrl;
 
                 setUser(user);
-                userUpdatedData({displayName:name, photoURL:photoUrl})
+                userUpdatedData({
+                    displayName:name, photoURL:photoUrl
+                })
                 .then(() =>{
                     navigate('/');
                 })
                 .catch(error =>{
                     console.log(error.message);
                 })
+            
                 
                 // console.log('Registered User:', user.email);
             })

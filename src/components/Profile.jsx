@@ -2,13 +2,17 @@ import React, { useContext } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { authContext } from '../provider/AuthProvider';
 import { FaUserEdit } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import Spinner from './Spinner';
 
 const Profile = () => {
     const { user } = useContext(authContext);
-    console.log(user);
-    const handleUpdate = () => {
-        alert("Update Information clicked!");
-    };
+    
+    if (!user) {
+        return (
+            <Spinner></Spinner>
+        );
+    }
     return (
         <div>
             <Helmet>
@@ -25,12 +29,11 @@ const Profile = () => {
                     />
                     <h2 className="text-2xl font-bold mt-3">{user.displayName}</h2>
                     <p className="text-md font-semibold text-gray-500">{user.email}</p>
-                    <button
+                    <Link to='/updateProfile'
                         className="btn btn-primary mt-4 flex items-center"
-                        onClick={handleUpdate}
                     >
                         <FaUserEdit className="mr-2" /> Update Information
-                    </button>
+                    </Link>
                 </div>
             </div>
         </div>

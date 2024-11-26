@@ -31,7 +31,7 @@ const Navbar = () => {
 
     return (
         <div>
-            <div className="navbar bg-base-100">
+            <div className="navbar bg-base-100 md:my-3">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -62,14 +62,14 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <p>
+                    {/* <p>
                         {user?.email}
-                    </p>
+                    </p> */}
                     {
                         user ?
                             <div className='mt-3'>
                                 <div className="tooltip" data-tip={user.displayName}>
-                                    <img className='w-8 rounded-full mx-2 ' src={user.photoURL} alt="" />
+                                    <img className='w-6 h-6 md:w-10 md:h-10 rounded-full mx-1 md:mx-4 ' src={user.photoURL} alt="" />
                                 </div>
                             </div>
                             : <FaUser className='text-xl mr-2'></FaUser>

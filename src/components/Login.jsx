@@ -1,10 +1,13 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { authContext } from '../provider/AuthProvider';
+import { sendPasswordResetEmail } from 'firebase/auth';
+import auth from '../firebase/firebase.config';
 
 const Login = () => {
     const location = useLocation();
     const navigate = useNavigate();
+    const emailRef = useRef()
     const { handleLogin, setUser } = useContext(authContext);
     const [error, setError] = useState({})
     const handleSubmitLogin = (e) => {
@@ -25,6 +28,22 @@ const Login = () => {
 
             })
     }
+    const handleForgetPassword = () =>{
+        const email = emailRef.current.value;
+
+        if(!email){
+            alert('Please provide a valid email address');
+        }
+        else{
+            sendPasswordResetEmail(auth, email)
+            .then(res => {
+                alert('Reset email sent. Please check you email')
+            })
+            .catch(error => {
+                console.log('Error: ', error);
+            })
+        }
+    }
     return (
         <div>
             <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl mx-auto my-24">
@@ -34,7 +53,7 @@ const Login = () => {
                         <label className="label">
                             <span className="label-text">Email</span>
                         </label>
-                        <input type="email" name='email' placeholder="email" className="input input-bordered" required />
+                        <input type="email" name='email' ref={emailRef} placeholder="email" className="input input-bordered" required />
                     </div>
                     <div className="form-control">
                         <label className="label">
@@ -48,7 +67,7 @@ const Login = () => {
                                 </label>
                             )
                         }
-                        <label className="label">
+                        <label onClick={handleForgetPassword} className="label">
                             <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                         </label>
                         {/* <div className="divider">OR</div>
