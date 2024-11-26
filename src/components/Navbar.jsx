@@ -2,17 +2,33 @@ import React, { useContext } from 'react';
 import { FaUser } from 'react-icons/fa';
 import { Link, NavLink } from 'react-router-dom';
 import { authContext } from '../provider/AuthProvider';
+import { FcGoogle } from 'react-icons/fc';
 
 const Navbar = () => {
-    const { user, handleSignOut } = useContext(authContext)
-    const links = <>
+    const { user, handleSignOut, handleGoogleLogin } = useContext(authContext);
+    const links = (
+        <>
+            <li className='mx-2'><NavLink to='/'>Home</NavLink></li>
+            <li className='mx-2'><NavLink to='/blogs'>Blog</NavLink></li>
+            <li className='mx-2'><NavLink to='/aboutUs'>About Us</NavLink></li>
+            {
+                user && <li className='mx-2'><NavLink to='/profile'>Profile</NavLink></li>
+            }
+        </>
+    );
 
-        <li className='mx-2'><NavLink to='/'>Home</NavLink></li>
-        <li className='mx-2'><NavLink to='/blogs'>Blog</NavLink></li>
-        <li className='mx-2'><NavLink to='/aboutUs'>About Us</NavLink></li>
-        <li className='mx-2'><NavLink to='/profile'>Profile</NavLink></li>
+    const handleGoogleClick = () => {
+        handleGoogleLogin()
+            .then((result) => {
+                const user = result.user;
+                // setUser(user); // If you need to update local state here
+                navigate("/"); // Redirect to the homepage
+            })
+            .catch((error) => {
+                console.error("Google Sign-In Error:", error.message);
+            });
+    };
 
-    </>
     return (
         <div>
             <div className="navbar bg-base-100">
@@ -47,25 +63,28 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end">
                     <p>
-                        {
-                            user?.email
-                        }
+                        {user?.email}
                     </p>
                     {
                         user ?
                             <div className='mt-3'>
-                                <div className="tooltip" 
-                                data-tip={user.displayName}>
-                                <img className='w-8 rounded-full mx-2 ' src={user.photoURL} alt="" />
+                                <div className="tooltip" data-tip={user.displayName}>
+                                    <img className='w-8 rounded-full mx-2 ' src={user.photoURL} alt="" />
                                 </div>
-                                
                             </div>
                             : <FaUser className='text-xl mr-2'></FaUser>
                     }
                     {
-                        user ? <button onClick={handleSignOut} className="btn">Logout</button> : <Link to='/login' className="btn">Login</Link>
+                        user ? 
+                            <button onClick={handleSignOut} className="btn">Logout</button> 
+                            : 
+                            <div className='flex justify-center items-center'>
+                                <Link to='/login' className="btn">Login</Link>
+                                <button onClick={handleGoogleClick} className='btn ml-2 text-2xl'>
+                                    <FcGoogle />
+                                </button>
+                            </div>
                     }
-
                 </div>
             </div>
         </div>
