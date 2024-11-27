@@ -43,11 +43,11 @@ const Register = () => {
                     navigate('/');
                 })
                 .catch(error =>{
-                    console.log(error.message);
+                    
                 })
             
                 
-                // console.log('Registered User:', user.email);
+                
             })
             .catch((error) => {
                 console.error('Registration Error:', error.message);

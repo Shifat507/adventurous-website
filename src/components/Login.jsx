@@ -15,7 +15,7 @@ const Login = () => {
         const email = e.target.email.value;
         const password = e.target.password.value;
 
-        // console.log(email, password);
+        
         handleLogin(email, password)
             .then(res => {
                 const user = res.user;
@@ -40,7 +40,7 @@ const Login = () => {
                 alert('Reset email sent. Please check you email')
             })
             .catch(error => {
-                console.log('Error: ', error);
+                
             })
         }
     }

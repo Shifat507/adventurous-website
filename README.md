@@ -5,8 +5,7 @@ Adventurous is a modern eco-adventure website that connects thrill-seekers with 
 The purpose of Adventurous is to promote eco-friendly travel while providing users with an intuitive and engaging platform to explore and book outdoor adventures. Our goal is to inspire people to connect with nature responsibly.  
 
 ## Live URL  
-[Visit Adventurous](#)  
-*Replace `#` with the actual live URL once deployed.*
+[Visit Adventurous](https://eco-adventure-experience-3a501.web.app/)  
 
 ---
 
@@ -25,19 +24,12 @@ The purpose of Adventurous is to promote eco-friendly travel while providing use
 - React.js  
 - TailwindCSS  
 
+
 **NPM Packages**:  
 - `react-router-dom`: For routing and navigation.   
 - `react-icons`: For icons across the website.  
 - `daisyui`: For pre-designed, customizable UI components.  
 - `react-fast-marquee`: For moving elements.  
+- `aos`: For animate on scroll library.  
 
 
----
-
-## Getting Started  
-To set up the project locally:  
-
-1. **Clone the repository**  
-   ```bash  
-   git clone <repository-url>  
-   cd Adventurous  
