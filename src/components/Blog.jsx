@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 const Blog = ({ blog }) => {
     const { id, adventureTitle, image, ecoFriendlyFeatures } = blog;
+    useEffect(() => {
+        AOS.init({
+            duration: 1000, // Animation duration in milliseconds
+            once: true,     // Animation runs only once
+        });
+    }, []);
     return (
-        <div>
+        <div  data-aos="fade-up">
             <div className="card card-side bg-base-100 shadow-xl gap-2 w-full md:w-[600px] h-auto md:h-[350px] flex flex-col md:flex-row transition-transform duration-300 hover:scale-105">
                 <figure className='w-full md:w-[50%] h-[200px] md:h-full'>
                     <img className='w-full h-full object-cover'

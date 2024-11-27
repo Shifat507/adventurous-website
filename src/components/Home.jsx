@@ -1,15 +1,15 @@
-import React from 'react';
-import Navbar from './Navbar';
+import React, { useEffect } from 'react';
 import Banner from './Banner';
-import Blogs from './Blogs';
 import { Link, useLoaderData } from 'react-router-dom';
 import Blog from './Blog';
 import adventureBanner from '../assets/adventure-title.png'
 import QuesAns from './QuesAns';
 import Reviews from './Reviews';
 import { Helmet } from 'react-helmet-async';
+
 const Home = () => {
     const blogsData = useLoaderData();
+    
     // console.log(data);
     return (
         <div>
@@ -17,6 +17,8 @@ const Home = () => {
                 <title>Home</title>
             </Helmet>
             <Banner></Banner>
+
+
             <main className='w-11/12 mx-auto '>
                 <div className='my-10 '>
 
@@ -28,7 +30,7 @@ const Home = () => {
                 <div className='my-10 grid lg:grid-cols-2 gap-8'>
 
                     {
-                        blogsData.slice(0, 4).map((blog, idx) => <Blog key={idx} blog={blog}></Blog>)
+                        blogsData.slice(0, 6).map((blog, idx) => <Blog key={idx} blog={blog}></Blog>)
                     }
                 </div>
                 <div className='flex justify-center my-6'>
