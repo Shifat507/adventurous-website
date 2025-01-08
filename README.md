@@ -30,6 +30,55 @@ The purpose of Adventurous is to promote eco-friendly travel while providing use
 - `react-icons`: For icons across the website.  
 - `daisyui`: For pre-designed, customizable UI components.  
 - `react-fast-marquee`: For moving elements.  
-- `aos`: For animate on scroll library.  
+- `aos`: For animate on scroll library.
+
+## Main Techonologis 
+- **React**: A JavaScript library for building user interfaces.
+- **React DOM**: For rendering React components in the browser.
+- **TailwindCSS**: A utility-first CSS framework for styling.
+- **daisyUI**: A TailwindCSS-based library for pre-styled UI components.
+- **React Icons**: For adding scalable vector icons.
+
+
+## Getting Started
+
+Follow these steps to run the project on your local machine.
+
+### Prerequisites
+
+Before running this project, ensure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (which includes npm)
+- Git (if cloning the repository)
+
+### Steps to Run Locally
+
+1. **Clone the Repository**
+   First, clone this repository to your local machine:
+
+   git clone `https://github.com/Shifat507/adventurous-website`
+   cd `adventurous-website`
+
+2. **Install Dependencies**
+
+    Next, install the project dependencies using npm:
+
+    npm install
+   
+4. **Set Up Environment Variables**
+   create a .env.local file and add firebase env variables and the base url.
+   example:
+    VITE_apiKey=----?----
+    VITE_authDomain=----?----
+    VITE_projectId=----?----
+    VITE_storageBucket=----?----
+    VITE_messagingSenderId=----?----
+    VITE_appId=----?----
+   
+
+6. **Run the Development Server**
+    Start the development server by running the following command:
+
+      npm run dev
 
 
